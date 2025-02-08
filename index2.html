@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Geométricas con Canvas</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Figuras Geométricas con HTML5 Canvas</h2>
+    <canvas id="miCanvas" width="500" height="400"></canvas>
+
+    <script>
+        // Obtener el lienzo y el contexto
+        var canvas = document.getElementById("miCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Dibujar un rectángulo (azul)
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 100, 70); 
+
+        // Dibujar un círculo (rojo)
+        ctx.beginPath();
+        ctx.arc(250, 100, 50, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.closePath();
+
+        // Dibujar un triángulo (verde)
+        ctx.beginPath();
+        ctx.moveTo(400, 150);
+        ctx.lineTo(350, 250);
+        ctx.lineTo(450, 250);
+        ctx.closePath();
+        ctx.fillStyle = "green";
+        ctx.fill();
+
+    </script>
+
+</body>
+</html>
